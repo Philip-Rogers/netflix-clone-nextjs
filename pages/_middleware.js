@@ -11,13 +11,14 @@ export async function middleware(req) {
   const userId = await verifyToken(token);
  
   const nextUrl = req.nextUrl.clone();
+  const { pathname } = req.nextUrl;
 
-  if(nextUrl.pathname.includes('/api/login') || userId || nextUrl.pathname.includes('/static')) {
+  if(pathname.includes('/api/login') || userId || pathname.includes('/static')) {
     return NextResponse.next();
   };
     
   // If no token return to login
-  if (!token && nextUrl.pathname !== '/login') {
+  if (!token && pathname !== '/login') {
       nextUrl.pathname = '/login';
       return NextResponse.redirect(nextUrl);
   };
