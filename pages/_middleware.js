@@ -13,11 +13,11 @@ export default async function middleware(req) {
 
   if(url.pathname.includes('/api/login') || userId || url.pathname.includes('/static')) {
     return NextResponse.next();
-  };
+  }
     
   // If no token return to login
   if (!token && url.pathname !== '/login') {
       url.pathname = '/login';
       return NextResponse.redirect(url);
-  };
+  }
 };
