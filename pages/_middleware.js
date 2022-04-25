@@ -1,4 +1,4 @@
-// Nextresponce is an extension of the native response interface
+// NextResponse is an extension of the native response interface
 import { NextResponse } from 'next/server';
 import { verifyToken } from '../lib/utils';
 
