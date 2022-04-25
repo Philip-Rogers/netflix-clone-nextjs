@@ -9,15 +9,15 @@ export default async function middleware(req) {
   const token = req ? req.cookies?.token : null;
   const userId = await verifyToken(token);
  
-  const nextUrl = req.nextUrl.clone();
+  const url = req.nextUrl.clone();
 
-  if(nextUrl.pathname.includes('/api/login') || userId || nextUrl.pathname.includes('/static')) {
+  if(url.pathname.includes('/api/login') || userId || url.pathname.includes('/static')) {
     return NextResponse.next();
   };
     
   // If no token return to login
-  if (!token && nextUrl.pathname !== '/login') {
-      nextUrl.pathname = '/login';
-      return NextResponse.redirect(nextUrl);
+  if (!token && url.pathname !== '/login') {
+      url.pathname = '/login';
+      return NextResponse.redirect(url);
   };
 };
