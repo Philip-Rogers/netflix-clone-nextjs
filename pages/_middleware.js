@@ -5,7 +5,7 @@ import { verifyToken } from '../lib/utils';
 
 // Function to check token verification at login level
 // If verification fails api routes will not execute and user will be redirected to login
-export default async function middleware(req) {
+export async function middleware(req) {
   const token = req ? req.cookies?.token : null;
   const userId = await verifyToken(token);
  
