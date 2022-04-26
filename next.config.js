@@ -4,5 +4,5 @@ module.exports = {
   images: {
     domains: ["images.unsplash.com", "i.ytimg.com"],
   },
-  webpack5: false,
+  devtool: false,
 };
