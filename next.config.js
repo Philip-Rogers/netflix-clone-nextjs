@@ -5,7 +5,4 @@ module.exports = {
     domains: ["images.unsplash.com", "i.ytimg.com"],
   },
   mode: 'production',
-  productionBrowserSourceMaps: false,
-  devtool: false,
-
 };
