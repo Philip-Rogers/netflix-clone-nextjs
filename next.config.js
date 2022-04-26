@@ -6,4 +6,6 @@ module.exports = {
   },
   mode: 'production',
   productionBrowserSourceMaps: false,
+  devtool: false,
+
 };
