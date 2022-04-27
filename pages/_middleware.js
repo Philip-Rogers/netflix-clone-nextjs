@@ -10,14 +10,15 @@ export async function middleware(req) {
   const userId = await verifyToken(token);
  
   const url = req.nextUrl.clone();
+  const { pathname } = req.nextUrl;
 
   // Skip static folder path so images load onto page
-  if(url.pathname.includes('/api/login') || userId || url.pathname.includes('/static')) {
+  if(pathname.includes('/api/login') || userId || pathname.includes('/static')) {
     return NextResponse.next();
   }
     
   // If no token return to login
-  if (!token && url.pathname !== '/login') {
+  if (!token && pathname !== '/login') {
       url.pathname = '/login';
       return NextResponse.redirect(url);
   }
