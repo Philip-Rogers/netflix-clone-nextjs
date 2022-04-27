@@ -11,6 +11,7 @@ export async function middleware(req) {
  
   const url = req.nextUrl.clone();
 
+  // Skip static folder path so images load onto page
   if(url.pathname.includes('/api/login') || userId || url.pathname.includes('/static')) {
     return NextResponse.next();
   }
