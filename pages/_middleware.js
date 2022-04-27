@@ -11,9 +11,9 @@ export async function middleware(req) {
  
   const url = req.nextUrl.clone();
 
-  if(url.pathname.includes('/api/login') || userId || url.pathname.includes('/static')) {
-    return NextResponse.next();
-  }
+  // if(url.pathname.includes('/api/login') || userId || url.pathname.includes('/static')) {
+  //   return NextResponse.next();
+  // }
     
   // If no token return to login
   if (!token && url.pathname !== '/login') {
