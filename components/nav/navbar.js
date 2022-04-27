@@ -111,20 +111,21 @@ const NavBar = () => {
 
     // When we create a function or component we must return something. 
     // Here I am returning my properties.
-    /* eslint-disable */
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <a className={styles.logoLink} href="/">
-                    <div className={styles.logoWrapper}>
-                        <Image 
-                            src="/static/netflix.svg" 
-                            alt="Netflix Logo" 
-                            width="128px"
-                            height="34px"
-                        />
-                    </div>
-                </a>
+                <Link href="/" passHref>
+                    <a className={styles.logoLink}>
+                        <div className={styles.logoWrapper}>
+                            <Image 
+                                src="/static/netflix.svg" 
+                                alt="Netflix Logo" 
+                                width="128px"
+                                height="34px"
+                            />
+                        </div>
+                    </a>
+                </Link>
                 <ul className={styles.navItems}>
                     <li className={styles.navItem} onClick={handleOnClickHome}>Home</li>
                     <li className={styles.navItem2} onClick={handleOnClickMyList}>My List</li>
@@ -154,7 +155,6 @@ const NavBar = () => {
         </div>
     );
 };
-/* eslint-enable */
 
 
 // Allow NavBar component to be usable

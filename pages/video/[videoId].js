@@ -90,7 +90,7 @@ const Video = ({ video }) => {
         };
       }
       fetchData();
-      }, []);
+      }, [videoId]);
     
       // Pass like/dislike persistence to the backend
       const runRatingService = async (favourited) => {
