@@ -24,12 +24,12 @@ import { verifyToken } from '../lib/utils';
 //   }
 // };
 
-export async function middleware(req) {
+export async function middleware(req, event) {
   const token = req ? req.cookies?.token : null;
   const userId = await verifyToken(token);
-  const {pathname, origin} = req.nextUrl.clone();
+  const {pathname, origin} = req.nextUrl.clone(event);
 
-  if ((token && userId) || pathname.includes(`/api/login`)) {
+  if ((token && userId) || pathname.includes(`/api/login`) || pathname.includes('/static')) {
       return NextResponse.next()
   }
   if (!token && pathname !== `/login`) {
