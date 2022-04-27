@@ -25,9 +25,9 @@ import { verifyToken } from '../lib/utils';
 // };
 
 export async function middleware(req, NextRequest, NextFetchEvent) {
-  const token = req ? req.cookies?.token : ''
-  const userId = await verifyToken(token)
-  const {pathname, origin} = req.nextUrl.clone()
+  const token = req ? req.cookies?.token : null;
+  const userId = await verifyToken(token);
+  const {pathname, origin} = req.nextUrl.clone();
 
   if ((token && userId) || pathname.includes(`/api/login`)) {
       return NextResponse.next()
