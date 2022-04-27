@@ -20,5 +20,4 @@ export async function middleware(req) {
       url.pathname = '/login';
       return NextResponse.redirect(url);
   }
-  NextResponse.next();
 };
