@@ -23,6 +23,9 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+            <link rel="manifest" href="/manifest.json" />
+            <link rel="shortcut icon" href="/favicon.ico" />
+            <link rel="apple-touch-icon" href="/apple-icon.png"></link>
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
             <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet"/>

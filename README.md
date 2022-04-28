@@ -47,3 +47,4 @@ Hasura (In Netflix-Clone we will write GraphQL queries we then pass that informa
 PostGres DB
 JWT (JSON Web Token) npm install jsonwebtoken
 Cookies package npm install cookie
+next-pwa
