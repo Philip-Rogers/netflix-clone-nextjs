@@ -30,4 +30,5 @@ export async function verifyToken(token) {
     console.error({ err });
     return null;
   }
+  return null;
 };

@@ -16,3 +16,9 @@ module.exports = withPWA({
     domains: ["images.unsplash.com", "i.ytimg.com"],
   },
 });
+
+module.exports = {
+  experimental: {
+    concurrentFeatures: false
+  }
+}
