@@ -32,6 +32,22 @@ const NavBar = () => {
     // In the NavBar component we will use this function for the home, my list, and login/signout
     const router = useRouter();
 
+    // useEffect(async () => {
+    //     // Assumes a user is already logged in
+    //     try {
+    //         const { email, } = await magic.user.getMetadata();
+    //         const didToken = await magic.user.getIdToken();
+
+    //         if (email) {
+    //             setUsername(email);
+    //             setDidToken(didToken);
+    //         }
+    //     } catch (error) {
+    //         // Handle errors if required!
+    //         console.error("Error retrieving email", error);
+    //     } 
+    // }, []);
+
     useEffect(() => {
         async function fetchData(){
         // Assumes a user is already logged in

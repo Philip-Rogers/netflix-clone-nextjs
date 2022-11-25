@@ -32,6 +32,8 @@ const NavBar = () => {
     // In the NavBar component we will use this function for the home, my list, and login/signout
     const router = useRouter();
 
+    
+
     useEffect(() => {
         async function fetchData(){
         // Assumes a user is already logged in

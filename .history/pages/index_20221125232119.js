@@ -55,7 +55,7 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
-        <NavBar />
+        <NavBar  />
         <Banner 
           videoId="yQEondeGvKo"
           title="Stranger Things 4"
